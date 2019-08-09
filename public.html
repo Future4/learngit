@@ -50,7 +50,7 @@
                 return false;
             }
         }
-<<<<<<< HEAD
+
 
         // 正则 千分位
         function numFormat(num) {
@@ -71,13 +71,31 @@
             }
             return res;
         }
+
+        let simpleColors = {
+            colorA: 'white',
+            colorB: 'black'
+        };
+        let natureColors = {
+            colorC: 'green',
+            colorD: 'yellow'
+        };
+        Object.setPrototypeOf(simpleColors, natureColors)
+        natureColors['colorA']; // => 'white'
+        natureColors['colorB']; // => 'black'
+        // console.log(Object.keys(natureColors))
+        // console.log(Object.values(natureColors))
+        // console.log(Object.entries(natureColors))
+        let enumerableKeys = [];
+        for (let key in natureColors) {
+            enumerableKeys.push(key);
+        }
+        console.log(enumerableKeys)
     </script>
 </body>
 
 </html>
-=======
-    </script>
+
 </body>
 
 </html>
->>>>>>> 61805cc5ffaba0a97addae0ff688343636950c43
