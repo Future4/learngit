@@ -80,6 +80,8 @@
             colorC: 'green',
             colorD: 'yellow'
         };
+
+        //循环
         Object.setPrototypeOf(simpleColors, natureColors)
         natureColors['colorA']; // => 'white'
         natureColors['colorB']; // => 'black'
@@ -91,6 +93,14 @@
             enumerableKeys.push(key);
         }
         console.log(enumerableKeys)
+
+
+        //查询
+        var key = $.trim($('#SearchKey').val());
+        var reg = new RegExp(key, "i");
+        if (reg.test('文字里面是否包含我输入的值')) {
+            console.log(11)
+        }
     </script>
 </body>
 
