@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learnGit.html</title>
+</head>
+<body>
+    1.git add Text.html  //添加文件到仓库
+    2.git commit -m "我提交了Text.html文件" //提交文件到仓库
+
+    （在这里我们修改了Text.html文件）
+
+    3.git status //查看git当前状态  (这里会提示我修改了，但没提交)
+
+    （如果我们出去了很久，回来时忘记修改了那些年了，我们可以用diff）
+    4.git diff text.html
+
+    版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看：
+
+    5.git log   (可选参数 --pretty=oneline) 一大堆是乱码是版本号
+
+
+    （git中 HEAD 表示当前版本  HEAD^上一个版本）
+
+    6. git reset --hard HEAD^  (回退到上一版本)
+
+    （这时当你用 git log时 你发现 最新版本的那个已经没了，退不回去了怎么办！？）
+
+    当你的命令行窗口还没有关掉时，你可以继续往上翻，找到未来的那个最新的版本号然后
+    7. git reset --hard 1094a24fgt1fft4t5
+
+    (如果回退版本后 你关闭了命令行窗口，并且关闭了电脑，第二天你后悔了，想恢复到最新的版本了怎么办)
+
+    8.git reflog  (在git中，git会记录每一次命令)
+    
+
+
+
+    <script>
+        /**
+         * 
+         * 
+        git add Text.html
+         * 
+        */
+    </script>
+</body>
+</html>
