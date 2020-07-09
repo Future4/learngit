@@ -6,33 +6,78 @@
     <title>learnGit.html</title>
 </head>
 <body>
-    1.git add Text.html  //添加文件到仓库
-    2.git commit -m "我提交了Text.html文件" //提交文件到仓库
 
+    1.git add Text.html  //添加文件到仓库
+    <br>
+
+    2.git commit -m "我提交了Text.html文件" //提交文件到仓库
+    <br>
     （在这里我们修改了Text.html文件）
+    <br>
 
     3.git status //查看git当前状态  (这里会提示我修改了，但没提交)
-
+    <br>
     （如果我们出去了很久，回来时忘记修改了那些年了，我们可以用diff）
-    4.git diff text.html
+    <br>
 
+    4.git diff text.html
+    <br>
     版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看：
+    <br>
 
     5.git log   (可选参数 --pretty=oneline) 一大堆是乱码是版本号
-
-
+    <br>
     （git中 HEAD 表示当前版本  HEAD^上一个版本）
+    <br>
 
     6. git reset --hard HEAD^  (回退到上一版本)
-
+    <br>
     （这时当你用 git log时 你发现 最新版本的那个已经没了，退不回去了怎么办！？）
-
+    <br>
     当你的命令行窗口还没有关掉时，你可以继续往上翻，找到未来的那个最新的版本号然后
-    7. git reset --hard 1094a24fgt1fft4t5
+    <br>
 
+    7. git reset --hard 1094a24fgt1fft4t5
+    <br>
     (如果回退版本后 你关闭了命令行窗口，并且关闭了电脑，第二天你后悔了，想恢复到最新的版本了怎么办)
+    <br>
 
     8.git reflog  (在git中，git会记录每一次命令)
+    <br>
+    (在你提交前你发现有个代码出错了，那么你可以删除它，或者使用)
+    <br>
+
+    9.git checkout -- text.html （修改后还没有暂存，你执行语句后会返回到最新的一次暂存，就是让这个文件回到最近一次git commit或git add时的状态
+    <br>
+    <!-- git 删除文件 -->
+    (当你想删除文件的时候 )可以直接rm 文件名
+    <br>
+
+    10。git rm text.html  （从版本库中删除文件）
+    <br>
+    （一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：）
+    <br>
+
+    11.git checkout -- text.html (因为上面每一次个操作都是一个修改)
+    <br>
+    <!-- 远程仓库 -->
+    （我们默认了你已经配演了ssh密钥）
+    <br>
+
+    12.git remote add origin git@github....ssh密钥 (连接远程仓库)
+    <br>
+
+    13.git push -u origin master  (把分支为master的推送到远程)
+    <br>
+
+    第一次推送时 加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+    <br>
+    
+    14.git push origin master
+    <br>
+
+    
+
     
 
 
