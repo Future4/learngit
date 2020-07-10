@@ -75,7 +75,29 @@
     
     14.git push origin master
     <br>
-    15. giy pull origin
+
+    <!-- 分支 -->
+
+    15.git checkout -b dev (-b相当于)  //创建并切换到dev分支
+    git branch dev     
+    git checkout dev
+
+    16.git branch  （查看当前分支）
+
+    （随便在dev上写上什么东西）
+
+    17。git merge dev  （当前是master，把dev的分支结果合并到master上）
+
+    （当合并完成后，我么你就可以删除dev分支了）
+    18。git branch -d dev
+
+
+    我们注意到切换分支使用git checkout <branch>，而前面讲过的撤销修改则是git checkout -- <file>，同一个命令，有两种作用，确实有点令人迷惑。
+    19.git switch -c dev  （创建并且切换到dev分支）
+
+    20. git switch master （直接切换到已有的master分支）
+
+
 
     
 
