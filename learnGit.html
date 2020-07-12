@@ -98,6 +98,30 @@
     20. git switch master （直接切换到已有的master分支）
 
 
+    (当git无法自动合并分支时，必须要先解决冲突，解决冲突后、再提交，自动合并完成)
+
+
+    （当你在开发dev分支的时候，在主分支上又一个bug分配给你了，你需要我dev分支储存起来）
+    21.git stash (储存当前分支)
+
+    （然后切换到主分支，签出一个解决bug的分之来，然后修改完毕后，commit提交，切换到主分支然后合并分之）
+
+    22.git stash list (查看缓存区列表)
+
+        <!-- 恢复缓存 -->
+    23.git stash apply (用于恢复，但是恢复之后缓存里面的内容并没有删除)，git stash drop  
+
+    24.git stash pop
+
+    25.git stash apply stash@{0} //可以使用它恢复指定的stash
+
+
+    (既然master分支上有一个bug，那么可想而知dev上也是有这么一个bug的，我们可以使用cherry-pick)
+
+    26.git cherry-pick 4c805e2  (能复制一个特定的提交、到当前分支)
+
+
+
 
     
 
