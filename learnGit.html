@@ -119,8 +119,17 @@
     (既然master分支上有一个bug，那么可想而知dev上也是有这么一个bug的，我们可以使用cherry-pick)
 
     26.git cherry-pick 4c805e2  (能复制一个特定的提交、到当前分支)
-
-
+    
+    27.git remote -v. (查看详细的远程)
+    28.git push origin master(推送到主分支、推送到其他分支)
+    
+    
+    标签管理
+    29.直接 git tag v0.1 (就可以打上标签)
+    30. git tag  （查看标签）
+    31.git log --pretty=oneline --abbrev-commit （给历史的提交打上标签） $ git tag v0.9 f52c633
+    32.git show v0.9 （查看详细）
+    33.git tag -a v0.1 -m "version 0.1 released" 1094adb （可以指定内容信息）
 
 
     
